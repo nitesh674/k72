@@ -21,7 +21,6 @@ export default function Agence() {
       "/src/assets/image/url10.jpg",
   ]
   useGSAP(() => {
-  // ✅ Preload all images first
   imageArray.forEach((src) => {
     const img = new Image();
     img.src = src;
