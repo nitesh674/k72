@@ -23,7 +23,7 @@ useGSAP(() => {
         amount: -0.3, 
       }
     })
-    
+
     .to(".stair", {
       y: "100%",
       stagger: {
