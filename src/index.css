@@ -9,5 +9,5 @@
   src: url(../public/Lausanne-500.woff2);
 }
 body{
-  background-color: #111;
+  overflow-x: hidden;
 }
