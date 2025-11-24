@@ -37,9 +37,6 @@ export default function Agence() {
       pinReparent:true,
       pinType:'transform',
       scrub:1,
-      anticipatePin:1,
-      // markers:true,
-      // invalidateOnRefresh:true,
       onUpdate: (elem) => {
         let imageIndex = Math.floor(elem.progress * imageArray.length);
         if (imageIndex >= imageArray.length) imageIndex = imageArray.length - 1;
@@ -52,7 +49,7 @@ export default function Agence() {
   return (
     <div >
       <div className='section1 relative bg-amber-200 py-1 '>
-      <div ref={imageDevRef} className=' h-[20vw] w-[15vw] rounded-3xl absolute top-70 left-105 overflow-hidden'>
+      <div ref={imageDevRef} className=' h-[20vw] w-[15vw] rounded-3xl absolute top-[30vh] left-105 overflow-hidden'>
             <img  ref={imageRef} className='h-full object-cover ' src="https://k72.ca/images/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7" alt="#" />
       </div>
       <div className=' relative font-[font2]'>

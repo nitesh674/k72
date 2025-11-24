@@ -33,11 +33,9 @@ function Stair(props) {
        gsap.from(pageRef.current,{
             opacity:0,
             delay:1.2,
-            scale:1.2
        })
     },[currentpath])
   
-    // console.log(props)
     return (
       <div>
          <div>
