@@ -1,8 +1,9 @@
-import React, { useRef } from 'react'
+import React, { useRef  } from 'react'
 
 function Navbar() {
   const navGreenRef = useRef(null)
-  con
+  const lineRef = useRef(null)
+  
   return (
     <div className='flex justify-between fixed top-0 w-full z-4 '>
       <div className='w-34 p-2'>
@@ -12,17 +13,22 @@ function Navbar() {
       </div>
       <div onMouseEnter={()=>{
           navGreenRef.current.style.height = "100%"
-          navGreenRef.current.style.text = "black"
+            lineRef.current.style.color = "black";
+
       }} 
       onMouseLeave={()=>{
          navGreenRef.current.style.height = "0%" 
+           lineRef.current.style.color = "white";
         
       }}
       className='w-55 h-13 relative bg-black'>
-          <p className='text-white align-middle leading-2 pt-2'>
-             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_____________<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;________
+          <p ref={lineRef} className= 'text-white align-middle leading-2 pt-2'>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_____________<br/>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;________
           </p>
-        <div ref={navGreenRef} className='bg-[#D3FD50] transition-all absolute top-0  w-full h-0' ></div>
+       <div ref={navGreenRef} className="bg-[#D3FD50] text-white transition-all absolute top-0 w-full h-0">
+
+       </div>
         <div className='relative'>
 
         </div>
