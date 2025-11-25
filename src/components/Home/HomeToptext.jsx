@@ -3,7 +3,7 @@ import Video  from './video'
 
 export default function HomeToptext() {
   return (
-    <div className='font-[font1] pt-5 text-center' >
+    <div className='font-[font1] pt-5 text-center text-white' >
       <div className='text-[9vw] uppercase leading-[8vw] flex items-center justify-center '>L'étincelle</div>
       <div className='text-[9vw] uppercase leading-[8vw] flex items-center justify-center '>
         qui
