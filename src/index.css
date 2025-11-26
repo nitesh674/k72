@@ -8,6 +8,20 @@
   font-family: font2;
   src: url(../public/Lausanne-500.woff2);
 }
-body{
+/* body{
   overflow-x: hidden;
+} */
+
+.movex {
+  animation: moveAnimation 10s linear infinite;
+
+}
+
+@keyframes moveAnimation {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
 }
