@@ -14,14 +14,12 @@ function Navbar() {
       <div onMouseEnter={()=>{
           navGreenRef.current.style.height = "100%"
             lineRef.current.style.color = "black";
-
-
       }} 
       onMouseLeave={()=>{
          navGreenRef.current.style.height = "0%" 
            lineRef.current.style.color = "white";
       }}
-      className='w-55 h-13 relative bg-black  overflow-hidden'>
+      className='w-55 h-13 relative mt-12 bg-black  overflow-hidden'>
           <p ref={lineRef} className= 'text-white align-middle leading-2 pt-2 relative z-20'>
              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_____________<br/>
              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;________
@@ -29,9 +27,9 @@ function Navbar() {
        <div ref={navGreenRef} className="bg-[#D3FD50] text-white transition-all absolute top-0 w-full h-0 z-0">
 
        </div>
-        <div className='relative'>
+        {/* <div className='relative'>
 
-        </div>
+        </div> */}
       </div>
     </div>
   )
