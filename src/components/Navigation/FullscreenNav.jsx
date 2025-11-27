@@ -109,27 +109,23 @@ function FullscreenNav() {
                     <h1>Rapport éthique</h1>
                     <h1>Options De Consentement</h1>
                 </div>
-                <div className='font-[font2] text-[12px] w-[30vw] bg-amber-800 flex justify-end items-center gap-3 mr-2'>
+                <div className='font-[font2] text-[12px] w-[30vw]  flex justify-end items-center gap-3 mr-2'>
                     <div className="border border-white text-white rounded-full 
                   w-15 h-10 flex items-center justify-center text-[14px]">
                         FB
                     </div>
-
                     <div className="border border-white text-white rounded-full 
-                  w-10 h-10 flex items-center justify-center text-[14px]">
+                  w-15 h-10 flex items-center justify-center text-[14px]">
                         IG
                     </div>
-
                     <div className="border border-white text-white rounded-full 
-                  w-10 h-10 flex items-center justify-center text-[14px]">
+                  w-15 h-10 flex items-center justify-center text-[14px]">
                         IN
                     </div>
-
                     <div className="border border-white text-white rounded-full 
-                  w-10 h-10 flex items-center justify-center text-[14px]">
+                  w-15 h-10 flex items-center justify-center text-[14px]">
                         BE
-                    </div>
-
+                    </div> 
                 </div>
 
             </div>
