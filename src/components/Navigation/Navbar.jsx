@@ -19,7 +19,7 @@ function Navbar() {
          navGreenRef.current.style.height = "0%" 
            lineRef.current.style.color = "white";
       }}
-      className='w-55 h-13 relative mt-12 bg-black  overflow-hidden'>
+      className='w-55 h-13 relative  bg-black  overflow-hidden'>
           <p ref={lineRef} className= 'text-white align-middle leading-2 pt-2 relative z-20'>
              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_____________<br/>
              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;________
