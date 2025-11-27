@@ -27,9 +27,6 @@ function Navbar() {
        <div ref={navGreenRef} className="bg-[#D3FD50] text-white transition-all absolute top-0 w-full h-0 z-0">
 
        </div>
-        {/* <div className='relative'>
-
-        </div> */}
       </div>
     </div>
   )
