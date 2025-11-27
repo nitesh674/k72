@@ -22,7 +22,7 @@
   
 }
 .link:hover .MoveLink{
-  opacity: 1;
+  opacity : 1;
   cursor: pointer;
 }
 
