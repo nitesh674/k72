@@ -25,6 +25,10 @@
   opacity : 1;
   cursor: pointer;
 }
+.NavContent{
+  overflow-x: hidden !important;
+  
+}
 
 @keyframes moveAnimation {
     from{

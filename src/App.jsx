@@ -12,7 +12,7 @@ export default function App() {
 
   return (
     <div>
-      <Navbar/> 
+      {/* <Navbar/>  */}
       <FullscreenNav/>
       {/* <Routes>
         <Route path='/' element={<Home />} />
