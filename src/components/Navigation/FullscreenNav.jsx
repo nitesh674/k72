@@ -8,7 +8,7 @@ function FullscreenNav() {
     const fullNavLinkRef = useRef(null);
     useGSAP( function (){
         const tl = gsap.timeline()
-        tl.from('.stait',{
+        tl.from('.stairing',{
             delay:1,
             height:0,
             stagger:{
@@ -18,16 +18,23 @@ function FullscreenNav() {
         tl.from(fullNavLinkRef.current,{
             opacity:0
         })
+        tl.from('.link',{
+            opacity:0,
+            rotateX:90,
+            stagger:{
+                amount:0.2
+            }
+        })
     })
     return (
         <div id='FillScreenNav' className='h-screen  overflow-hidden w-full absolute   text-white bg-black'>
             <div  className='h-screen w-full fixed'>
                 <div className='w-full h-full flex'>
-                    <div className='stair h-full w-1/5 bg-amber-900'></div>
-                    <div className='stair h-full w-1/5 bg-amber-900'></div>
-                    <div className='stair h-full w-1/5 bg-amber-900'></div>
-                    <div className='stair h-full w-1/5 bg-amber-900'></div>
-                    <div className='stair h-full w-1/5 bg-amber-900'></div>
+                    <div className='stairing h-full w-1/5 bg-amber-900'></div>
+                    <div className='stairing h-full w-1/5 bg-amber-900'></div>
+                    <div className='stairing h-full w-1/5 bg-amber-900'></div>
+                    <div className='stairing h-full w-1/5 bg-amber-900'></div>
+                    <div className='stairing h-full w-1/5 bg-amber-900'></div>
                 </div>
             </div>
             <div ref={fullNavLinkRef} className='relative'>
@@ -45,8 +52,7 @@ function FullscreenNav() {
                     </div>
                 </div>
                 <div className=' NavContent py-7'>
-                    <div
-                        className='link relative border-t-[0.5px] border-white/50 overflow-hidden'>
+                    <div className='link origin-top relative border-t-[0.5px] border-white/50 overflow-hidden'>
                         <h1 className='font-[font2] text-[8vw] leading-[0.8] pt-4 uppercase text-center'>Projets</h1>
                         <div ref={NavSilder} className='MoveLink absolute text-black bg-[#D3FD50] flex top-0 '>
                             <div className='flex movex items-center'>
@@ -65,7 +71,7 @@ function FullscreenNav() {
                     </div>
                     {/* 2 */}
                     <div
-                        className='link relative border-t-[0.5px] border-white/50 overflow-hidden'>
+                        className='link origin-top relative border-t-[0.5px] border-white/50 overflow-hidden'>
                         <h1 className='font-[font2] text-[8vw] leading-[0.8] pt-4 uppercase text-center'>Agence</h1>
                         <div ref={NavSilder} className='MoveLink absolute text-black bg-[#D3FD50] flex top-0 '>
                             <div className='flex movex items-center'>
@@ -84,7 +90,7 @@ function FullscreenNav() {
                     </div>
                     {/* 3 */}
                     <div
-                        className='link relative border-t-[0.5px] border-white/50 overflow-hidden'>
+                        className='link origin-top relative border-t-[0.5px] border-white/50 overflow-hidden'>
                         <h1 className='font-[font2] text-[8vw] leading-[0.8] pt-4 uppercase text-center'>Contact</h1>
                         <div ref={NavSilder} className='MoveLink absolute text-black bg-[#D3FD50] flex top-0 '>
                             <div className='flex movex items-center'>
@@ -103,7 +109,7 @@ function FullscreenNav() {
                     </div>
                     {/* 4 */}
                     <div
-                        className='link relative border-y-[0.5px] border-white/50 overflow-hidden'>
+                        className='link origin-top relative border-y-[0.5px] border-white/50 overflow-hidden'>
                         <h1 className='font-[font2] text-[8vw] leading-[0.8] pt-4 uppercase text-center'>Blogue</h1>
                         <div ref={NavSilder} className='MoveLink absolute text-black bg-[#D3FD50] flex top-0 '>
                             <div className='flex movex items-center'>
