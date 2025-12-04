@@ -4,8 +4,9 @@ import { gsap } from 'gsap'
 
 function FullscreenNav() {
     const NavSilder = useRef(null);
-    // const stairparentRef = useRef(null);
     const fullNavLinkRef = useRef(null);
+
+    
     useGSAP( function (){
         const tl = gsap.timeline()
         tl.from('.stairing',{
@@ -27,7 +28,7 @@ function FullscreenNav() {
         })
     })
     return (
-        <div id='FillScreenNav' className='h-screen  overflow-hidden w-full absolute   text-white bg-black'>
+        <div id='FillScreenNav' className='h-screen  hidden overflow-hidden w-full absolute   text-white bg-black'>
             <div  className='h-screen w-full fixed'>
                 <div className='w-full h-full flex'>
                     <div className='stairing h-full w-1/5 bg-amber-900'></div>

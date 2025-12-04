@@ -21,8 +21,8 @@ function Navbar() {
         }}
         className='w-55 h-13 relative  bg-black  overflow-hidden'>
         <div ref={lineRef} className='relative flex flex-col justify-center items-end gap-1  h-full px-8 z-20' >
-          <div className='w-20 h-0.5 bg-amber-50'></div>
-          <div className='w-15 h-0.5 bg-amber-50'></div>
+          <div className='w-15 h-0.5  bg-amber-50'></div>
+          <div className='w-8 h-0.5 bg-amber-50'></div>
         </div>
         {/* <p className= 'text-white align-middle leading-2 pt-2 relative z-20'>
              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_____________<br/>
