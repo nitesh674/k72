@@ -1,25 +1,22 @@
 
 import { Link, Route, Routes } from 'react-router-dom'
+import React, {useState} from 'react'
 import Home from './pages/Home.jsx'
 import Agence from './pages/Agence'
 import Projects from './pages/Projects'
 import Navbar from './components/Navigation/Navbar.jsx'
 import FullscreenNav from './components/Navigation/FullscreenNav.jsx'
-import { NavContext } from "./context/NavContext.jsx";
+
 
 
 
 export default function App() {
-  const [isNavOpen, setisNavOpen] = useState(false);
+  const [navOpen, setNavOpen] = useState(false);
 
   return (
     <div>
-      <navbarContext.Provider value={[isNavOpen, setisNavOpen]}>
-      <Navbar />
-      <FullscreenNav />
-      </navbarContext.Provider>
-      {/* <Navbar/> 
-      <FullscreenNav/> */}
+      <Navbar/> 
+      <FullscreenNav/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/agence' element={<Agence />} />

@@ -4,7 +4,8 @@ import { NavbarContext } from '../../context/NavContext';
 function Navbar() {
   const navGreenRef = useRef(null)
   const lineRef = useRef(null)
-  const [isNavOpen, setisNavOpen] = useContext(NavbarContext);
+  const [navOpen, setNavOpen] = useContext(NavbarContext);
+
 
   return (
     <div className='flex justify-between fixed top-0 w-full z-4 '>
@@ -14,7 +15,7 @@ function Navbar() {
         </svg>
       </div>
       <div onClick={()=>{
-        setisNavOpen(true)
+        setNavOpen(true)
       }} onMouseEnter={() => {
         navGreenRef.current.style.height = "100%"
         lineRef.current.style.color = "black";
@@ -24,7 +25,7 @@ function Navbar() {
           lineRef.current.style.color = "white";
         }}
         className='w-55 h-13 relative  bg-black  overflow-hidden'>
-        <div ref={lineRef} className='relative flex flex-col justify-center items-end gap-1  h-full px-8 z-20' >
+        <div  ref={lineRef} className='relative flex flex-col justify-center items-end gap-1  h-full px-8 z-20' >
           <div className='w-15 h-0.5  bg-amber-50'></div>
           <div className='w-8 h-0.5 bg-amber-50'></div>
         </div>

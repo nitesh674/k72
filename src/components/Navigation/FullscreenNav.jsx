@@ -8,13 +8,16 @@ function FullscreenNav() {
     const fullNavLinkRef = useRef(null);
     const fullScreenRef = useRef(null);
 
-    const { isNavOpen, setIsNavOpen } = useContext(NavbarContext);
+    const [navOpen, setNavOpen] = useContext(NavbarContext);
 
-    console.log(isNavOpen);
+
 
 
     useGSAP( function (){
         const tl = gsap.timeline()
+        // tl.to('#FillScreenNav',{
+        //     display:'block'
+        // })
         tl.from('.stairing',{
             delay:1,
             height:0,
@@ -33,17 +36,19 @@ function FullscreenNav() {
             }
         })
         tl.pause();
-        if(isNavOpen){
-            fullScreenRef.current.style.display = 'block';
-            tl.play();
+        if(navOpen){
+            gsap.to('.fullscreennav',{
+                display:'block'
+            })
         }
         else{
-            fullScreenRef.current.style.display = 'none';
-            tl.reverse();
+            gsap.to('.fullscreennav',{
+                display:'none'
+            })
         }
-    }, [isNavOpen])
+    }, [navOpen])
     return (
-        <div ref={fullScreenRef} id='FillScreenNav' className='h-screen  overflow-hidden w-full absolute  z-50 text-white bg-black'>
+        <div ref={fullScreenRef} id='FillScreenNav'  className='fullscreennav hidden h-screen  overflow-hidden w-full absolute z-50 text-white bg-black'>
             <div  className='h-screen w-full fixed'>
                 <div className='w-full h-full flex'>
                     <div className='stairing h-full w-1/5 bg-amber-900'></div>
@@ -62,7 +67,9 @@ function FullscreenNav() {
                         </svg>
                     </div>
 
-                    <div className="w-20 h-20 cursor-pointer relative">
+                    <div onClick={()=>{
+                        setNavOpen(false)
+                    }} className="w-20 h-20 cursor-pointer relative">
                         <div className="absolute inset-0 w-px bg-[#D3FD50] rotate-45 mx-auto"></div>
                         <div className="absolute inset-0 w-px bg-[#D3FD50] -rotate-45 mx-auto"></div>
                     </div>
