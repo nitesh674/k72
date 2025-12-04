@@ -1,12 +1,18 @@
 import { useGSAP } from '@gsap/react';
-import React, { useRef } from 'react'
+import React, { useRef , useContext  } from 'react'
 import { gsap } from 'gsap'
-
+import Navbar from './Navbar';
+import { NavbarContext } from '../../context/NavContext.jsx';
 function FullscreenNav() {
     const NavSilder = useRef(null);
     const fullNavLinkRef = useRef(null);
+    const fullScreenRef = useRef(null);
 
-    
+    const { isNavOpen, setIsNavOpen } = useContext(NavbarContext);
+
+    console.log(isNavOpen);
+
+
     useGSAP( function (){
         const tl = gsap.timeline()
         tl.from('.stairing',{
@@ -26,9 +32,18 @@ function FullscreenNav() {
                 amount:0.2
             }
         })
-    })
+        tl.pause();
+        if(isNavOpen){
+            fullScreenRef.current.style.display = 'block';
+            tl.play();
+        }
+        else{
+            fullScreenRef.current.style.display = 'none';
+            tl.reverse();
+        }
+    }, [isNavOpen])
     return (
-        <div id='FillScreenNav' className='h-screen  hidden overflow-hidden w-full absolute   text-white bg-black'>
+        <div ref={fullScreenRef} id='FillScreenNav' className='h-screen  overflow-hidden w-full absolute  z-50 text-white bg-black'>
             <div  className='h-screen w-full fixed'>
                 <div className='w-full h-full flex'>
                     <div className='stairing h-full w-1/5 bg-amber-900'></div>
@@ -136,16 +151,16 @@ function FullscreenNav() {
                                     viewBox="0 0 24 24"
                                     fill="none"
                                     stroke="white"
-                                    stroke-width="1"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    class="w-8 h-8"
+                                    strokeWidth="1"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    className="w-8 h-8"
                                 >
                                     <circle cx="12" cy="12" r="10"></circle>
                                     <path d="M2 12h20"></path>
                                     <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                                 </svg>
-                                <span class="tracking-wide text-sm">MONTREAL_03:23:54</span>
+                                <span className="tracking-wide text-sm">MONTREAL_03:23:54</span>
                             </div>
                         </div>
                         <div className='font-[font2] text-[13px] w-[43vw]  h-[10vh]  gap-1 flex justify-between items-center '>

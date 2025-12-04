@@ -1,11 +1,12 @@
 import React, { createContext, useState } from 'react'
 
+ export const NavbarContext  = createContext();
 function NavContext({children}) {
-    const NavbarContext  = createContext();
-    const [isNavOpen, setIsNavOpen] = useState(false);
+    const [isNavOpen, setisNavOpen] = useState(false);
+
   return (
     <div>
-        <NavbarContext.Provider value={{ isNavOpen, setIsNavOpen }}>
+        <NavbarContext.Provider value={{ isNavOpen, setisNavOpen }}>
             {children}
         </NavbarContext.Provider>
     </div>
