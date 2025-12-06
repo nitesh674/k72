@@ -38,3 +38,24 @@
         transform: translateX(-100%);
     }
 }
+
+@media (max-width: 768px) {
+  .HomeToptext{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* or the height you want */
+  text-align: center;
+  position: relative;
+}
+  
+  .Toptext{
+    font-size: 10vw;
+    line-height: 13vw;
+  }
+  .Topvideo{
+    height: 12vw;
+    width: 22vw;
+  }
+}
