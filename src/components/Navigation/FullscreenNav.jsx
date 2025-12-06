@@ -37,7 +37,7 @@ function FullscreenNav() {
         else {
             gsap.to('.fullscreennav', {
               onComplete: () => {
-                gsap.set('.fullscreennav', { display: 'none' });
+                gsap.set('.fullscreennav', { display: 'none',delay:0.2 });
             }
             })
         }
