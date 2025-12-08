@@ -45,11 +45,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* or the height you want */
+  height: 110vh;  
   text-align: center;
   position: relative;
+  font-size: 15vw;
 }
-  
   .Toptext{
     font-size: 10vw;
     line-height: 13vw;
@@ -58,5 +58,28 @@
     height: 12vw;
     width: 22vw;
   }
+  .rightNav{
+    width: 40vw;
+    height: 10vw;
+  }
+  .BottomText{
+    font-size: 6vw;
+    line-height: 7vw;
+    width: 100%;
+  }
+  .BottomText .Innerdiv{
+    padding: 0 10vw;
+  }
+  .logo {
+    width: 32vw;
+  }
+  .logo svg {
+    width: 100%;
+  }
  
+}
+@media (min-width: 1024px) {
+  .logo {
+    /* width: 250px;  */
+  }
 }
