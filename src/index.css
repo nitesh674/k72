@@ -76,10 +76,25 @@
   .logo svg {
     width: 100%;
   }
- 
+  .agenceText{
+    margin-top: 50vw !important;
+
+  }
+  .AgencePra{
+    padding-left: 35vw;
+  }
+  .AgencePra p{
+    font-size: 5vw;
+  }
+ .scrolldev{
+    width: 40vw !important; 
+    height: 70vw !important;
+    background-color: aqua;
+    margin-left: -80vw !important;
+    margin-top: -10vw !important;
+
+ }
 }
 @media (min-width: 1024px) {
-  .logo {
-    /* width: 250px;  */
-  }
+  
 }
