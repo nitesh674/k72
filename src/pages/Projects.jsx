@@ -11,6 +11,9 @@ export default function Projects() {
   },{
     image1:'https://k72.ca/images/caseStudies/COUP_FUMANT/CF_thumbnail.jpg?w=1280&h=960&s=c119303a20520c4188aa3f592038fd4c',
     image2:'https://k72.ca/images/caseStudies/PJC/Thumbnails/PJC_SiteK72_Thumbnail_640x290.jpg?w=640&h=290&s=ac50a70feaaa2601b3aacad544c6045b'
+  },{
+    image1:'https://k72.ca/images/caseStudies/A_table/thumbnailimage_atable2.jpg?w=1280&h=960&s=b1cfc8abd6135cf78017737130e49e47',
+    iamge2:'https://k72.ca/images/caseStudies/CRISIS24/crisis24_behance_1920X1200_cartes.jpg?w=1280&h=960&s=bb42c9de87442e1bffc542c332e07124',
   }
   ]
   return (
@@ -18,9 +21,11 @@ export default function Projects() {
       <div className=' pt-[40vh]'>
         <h1 className='font-[font2] text-[15vw] uppercase'>Projets</h1>
       </div>
+      <div className='-mt-20'>
         {images.map(function(elem){
           return <ProjectsCard iamge1={elem.image1} iamge2={elem.image2} />;
         })}
+        </div>
     </div>
   )
 }
