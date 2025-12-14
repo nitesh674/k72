@@ -23,7 +23,9 @@ export default function Projects() {
       </div>
       <div className='-mt-20'>
         {images.map(function(elem){
-          return <ProjectsCard iamge1={elem.image1} iamge2={elem.image2} />;
+          return  <div  className='w-full h-[500px] mb-4 flex gap-4 '>
+          <ProjectsCard iamge1={elem.image1} iamge2={elem.image2} />;
+        </div>
         })}
         </div>
     </div>
